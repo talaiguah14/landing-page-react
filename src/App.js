@@ -1,6 +1,6 @@
-import "./App.css";
-
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import "./App.css";
+import LoginPage from "./components/pages/login";
 
 const router = createBrowserRouter([
   {
@@ -13,7 +13,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/login",
-    element: <div>Hello wolrd login</div>,
+    element: <LoginPage />,
   },
   {
     path: "/dashboard",
