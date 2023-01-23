@@ -4,7 +4,7 @@ const Menu = ({}) => {
   return (
     <nav className="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
       <a className="navbar-brand" href="#">
-        Mi Proyecto
+        Landing Page
       </a>
       <button
         className="navbar-toggler"
@@ -40,23 +40,9 @@ const Menu = ({}) => {
             </a>
           </li>
         </ul>
-        <form className="form-inline mt-2 mt-md-0">
-          <input
-            className="form-control mr-sm-2"
-            type="text"
-            placeholder="Buscar"
-            aria-label="Buscar"
-          />
-          <button
-            className="btn btn-outline-success my-2 my-sm-0"
-            type="submit"
-          >
-            Buscar
-          </button>
-        </form>
       </div>
     </nav>
   );
 };
 
-export default menu;
+export default Menu;
