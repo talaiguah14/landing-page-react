@@ -38,17 +38,13 @@ const LoginPage = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit(envioDatos)}>
+    <form onSubmit={handleSubmit(envioDatos)} className="form">
       <Input name="user" error={errors.user?.message} label="Usuario">
         <input
           id="user"
           className="input"
           {...register("user", {
             required: "este valor es requerido",
-            minLength: {
-              value: 8,
-              message: "este camponasdasd",
-            },
           })}
         />
       </Input>
@@ -56,8 +52,13 @@ const LoginPage = () => {
         <input
         id="password"
           className="input"
+          type="password"
           {...register("password", {
             required: "este valor es requerido",
+            minLength: {
+              value: 8,
+              message: "este camponasdasd",
+            },
           })}
         />
       </Input>
