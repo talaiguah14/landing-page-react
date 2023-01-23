@@ -11,9 +11,10 @@ const RegistrationPage = () => {
 
   const [errorForm, setErrorForm] = useState(null);
 
+
   const envioDatos = (data) => {
     //consumo service
-    fetch("http://localhost:4000/api/login/", {
+    fetch("http://localhost:4000/api/registro/", {
       method: "POST",
       body: JSON.stringify(data),
       headers: {
@@ -25,8 +26,8 @@ const RegistrationPage = () => {
         if (data.status === 400) {
           setErrorForm(data.message);
         } else if (data.status === 200) {
-          localStorage.setItem("token", data.token);
-          window.location.href = "/dashboard";
+            localStorage.setItem("token", data.token);
+            window.location.href = "/dashboard";
         }
       })
       .catch((error) => {
@@ -36,6 +37,7 @@ const RegistrationPage = () => {
 
     //en caso de exito redirecciono
   };
+
   return (
     <form onSubmit={handleSubmit(envioDatos)}>
       <Input name="nombres" error={errors.nombre?.message} label="Nombres">
@@ -58,15 +60,15 @@ const RegistrationPage = () => {
           )}
         />
       </Input>
-      <Input name="cod_tipo_documento" error={errors.cod_tipo_documento?.message} label="Tipo documento">
-      <select id="cod_tipo_documento" className="input" {
-        ...register("cod_tipo_documento",{
+      <Input name="tipoDocumento" error={errors.tipoDocumento?.message} label="Tipo documento">
+      <select id="tipoDocumento" className="input" {
+        ...register("tipoDocumento",{
           required: "El campo Tipo documento es obligatorio, Por favor deligenciarlo."
         })
       }>
-        <option value="option1">Opción 1</option>
-        <option value="option2">Opción 2</option>
-        <option value="option3">Opción 3</option>
+        <option value="1">CC: Cedula de Ciudadania</option>
+        <option value="2">CE: Cedula de extranjeria</option>
+        <option value="3">PAP: Pasaporte</option>
       </select>
       </Input>
       <Input name="numero_documento" error={errors.numero_documento?.message} label="Numero documento">
@@ -79,12 +81,11 @@ const RegistrationPage = () => {
           )}
         />
       </Input>
-      <Input name="mail" error={errors.mail?.message} label="Correo electronico">
+      <Input name="correo" error={errors.correo?.message} label="Correo electronico">
         <input
-          id="mail"
+          id="correo"
           className="input"
-          type="email"
-          {...register("mail",{
+          {...register("correo",{
             required: "El campo Correo electronico es obligatorio, Por favor deligenciarlo."
           },
           )}
