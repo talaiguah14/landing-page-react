@@ -2,6 +2,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./App.css";
 import LoginPage from "./components/pages/login";
 import RegistrationPage from "./components/pages/registration";
+import DashboardPage from "./components/pages/dashboard";
 
 const router = createBrowserRouter([
   {
@@ -18,7 +19,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/dashboard",
-    element: <div>Hello wolrd dashboard</div>,
+    element: <DashboardPage/>,
   },
 ]);
 
