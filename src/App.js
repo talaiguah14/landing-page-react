@@ -1,15 +1,18 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./App.css";
+import LandinPage from "./components/pages/landing"
 import LoginPage from "./components/pages/login";
+import RegistrationPage from "./components/pages/registration";
+import DashboardPage from "./components/pages/dashboard";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <div>Hello word</div>,
+    element: <LandinPage/>,
   },
   {
     path: "/registro",
-    element: <div>Hello wolrd registro</div>,
+    element: <RegistrationPage/>
   },
   {
     path: "/login",
@@ -17,7 +20,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/dashboard",
-    element: <div>Hello wolrd dashboard</div>,
+    element: <DashboardPage/>,
   },
 ]);
 

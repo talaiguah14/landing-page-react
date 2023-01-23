@@ -1,0 +1,10 @@
+.footer{
+    position: absolute;
+    top: 90vh;
+    right: auto;
+    left: 84vh;
+    bottom: auto;
+}
+.parrafo{
+    background: red;
+}
