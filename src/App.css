@@ -54,3 +54,14 @@
   width: 131vh;
   height: 69vh;
 }
+
+.ButtonPosition {
+  position: absolute;
+  right: 7vh;
+  display: flex;
+  top: 8px;
+}
+
+#Header{
+  position: relative;
+}

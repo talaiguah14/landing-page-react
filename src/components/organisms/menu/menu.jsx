@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import "./style.css"
 
 const Menu = ({}) => {
   return (
+    <div id="Menu" className="Menu">
     <nav className="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
       <a className="navbar-brand" href="#">
         Landing Page
@@ -42,6 +44,7 @@ const Menu = ({}) => {
         </ul>
       </div>
     </nav>
+    </div>
   );
 };
 
